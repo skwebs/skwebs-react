@@ -46,12 +46,6 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-slate-950 text-white">
-      {/* BACKGROUND GLOW */}
-      <div className="fixed inset-0 -z-10 overflow-hidden">
-        <div className="absolute -left-32 top-0 h-96 w-96 rounded-full bg-sky-500/10 blur-[120px]" />
-        <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-cyan-500/10 blur-[120px]" />
-      </div>
-
       {/* NAVBAR */}
       <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
@@ -106,15 +100,22 @@ const App = () => {
         )}
       </header>
 
+      {/* BACKGROUND GLOW */}
+      <div className="fixed inset-0 -z-10 overflow-hidden">
+        <div className="absolute -left-32 top-0 h-96 w-96 rounded-full bg-sky-500/10 blur-[120px]" />
+        <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-cyan-500/10 blur-[120px]" />
+      </div>
+
       {/* HERO */}
-      <section className="mx-auto flex min-h-[90vh] max-w-7xl items-center px-5 py-20 sm:px-6">
-        <div className="grid items-center gap-14 lg:grid-cols-2">
+      <section className="mx-auto flex min-h-[90vh]  items-center justify-center px-5 py-20 sm:px-6 w-full">
+        <div className="grid max-w-7xl items-center gap-14 lg:grid-cols-2">
           {/* LEFT */}
           <motion.div
             initial="hidden"
             animate="visible"
             variants={fadeUp}
             transition={{ duration: 0.7 }}
+            className="mx-auto flex max-w-2xl flex-col items-center text-center lg:mx-0 lg:max-w-none lg:items-start lg:text-left"
           >
             <span className="inline-block rounded-full border border-sky-500/30 bg-sky-500/10 px-4 py-2 text-sm text-sky-400">
               Full Stack & Mobile Developer
@@ -124,13 +125,13 @@ const App = () => {
               Hi, I'm <span className="text-sky-400">Satish Kumar Sharma</span>
             </h1>
 
-            <p className="mt-5 max-w-xl text-base leading-7 text-slate-400 sm:text-lg">
+            <p className="mt-5 text-base leading-7 text-slate-400 sm:text-lg">
               Computer Teacher & Self-Taught Developer building modern web and
               mobile applications using Laravel, React Native, Expo and REST
               APIs.
             </p>
 
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row justify-center lg:justify-start">
               <a
                 href="#projects"
                 className="rounded-2xl bg-sky-500 px-6 py-4 text-center font-semibold text-black transition hover:scale-[1.03] active:scale-95"
