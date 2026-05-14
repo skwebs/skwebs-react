@@ -45,7 +45,7 @@ const App = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-slate-950 text-white">
+    <div className="min-h-screen bg-slate-950 text-white">
       {/* BACKGROUND GLOW */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
         <div className="absolute -left-32 top-0 h-96 w-96 rounded-full bg-sky-500/10 blur-[120px]" />
